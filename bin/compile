@@ -265,7 +265,7 @@ then
   FLAGS=(${FLAGS[@]} -ldflags "-X $xval")
 fi
 
-sh scripts/pre-build
+cd $build && sh scripts/pre-build
 
 unset GIT_DIR # unset git dir or it will mess with goinstall
 cd $p
